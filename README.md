@@ -52,3 +52,16 @@ for more info look at the example.
 
 Nothing fancy but I think this is the easiest way to write one universal code for all apple devices.
 
+
+Open the example and compile it at different devices or simulators and see how it loads
+the appropriate images for each device
+
+
+Disadvantages of this method:
+ 
+* TTF fonts don't look that well
+and you need additional fix for that if it bothers you
+
+* it "stretches" your app. If aspect ratio is important it might look a bit funny.
+
+I personally think is not that big of a deal but others might disagree 
