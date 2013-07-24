@@ -32,6 +32,7 @@ and then I upscale everything up automatically to fit the new resolution.
 This might sound horrible for images but we solve this by using 
 
 -> ofxUniversalImage
+-> ofxUniversalFont
 
 If your image appears pixelated you just provide an ADDITIONAL image in your data folder
 with the same name but a specific extension at the end to separate it from the other one:
@@ -59,9 +60,8 @@ the appropriate images for each device
 
 Disadvantages of this method:
  
-* TTF fonts don't look that well
-and you need additional fix for that if it bothers you
 
 * it "stretches" your app. If aspect ratio is important it might look a bit funny.
+*but you can use squaredScale and create 2 scopes : one that fills the screen and one that keeps aspect-ratio
 
 I personally think is not that big of a deal but others might disagree 
