@@ -17,7 +17,7 @@
 
 
 extern BOOL isRetina,isiPad,iphone5;
-extern float scaleWidth,scaleHeight;
+extern float scaleWidth,scaleHeight,squaredScaleW,squaredScaleH,fontScaleW,fontScaleH;
 extern int  App_width, App_height;
 
 
@@ -41,6 +41,39 @@ void init_ofxUniversalApp();
 
 
 ofPoint mouse();
+
+
+class ofxUniversalFont : public ofTrueTypeFont{
+    int SIZE;
+public:
+void loadFont(string fontName,int Size){
+        SIZE = Size*scaleWidth;
+ofTrueTypeFont::loadFont(fontName, SIZE);
+    }
+    void draw(string message,int x,int y){
+        ofPushMatrix();
+        ofTranslate(x, y);
+//float sx = ofMap(scaleWidth, 1, 4.8, 1,0.25);
+//float sy = ofMap(scaleHeight, 1, 4.2666, 1,0.2);
+        ofScale(fontScaleW,fontScaleH);
+ofTrueTypeFont::drawString(message,0,0);
+        ofPopMatrix();
+
+        
+    }
+    void draw(string message,ofPoint pos){
+      
+    this->draw( message,pos.x,pos.y);
+    }
+    
+};
+
+
+
+
+
+
+
 
 
 class ofxUniversalImage : public ofImage{
@@ -72,10 +105,16 @@ public:
                 
             }
             if(!isiPad&&isRetina){
+
                 ofImage::loadImage(url);
             }
         }
-        if(!isAllocated())ofImage::loadImage(temp);
+        if(!ofImage::isAllocated()){ofImage::loadImage(temp);
+        
+            cout<<"ofxUniversalImage::"<<endl;
+            cout<<"something went wrong TRYING TO LOAD TEMP: "<<temp<<" The url is "<<url<<endl;
+        
+        }
         
         return ofImage::isAllocated();
     }

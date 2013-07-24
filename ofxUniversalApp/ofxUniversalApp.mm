@@ -10,7 +10,7 @@
 
 
  BOOL isRetina,isiPad,iphone5;
- float scaleWidth,scaleHeight;
+ float scaleWidth,scaleHeight,squaredScaleW,squaredScaleH,fontScaleW,fontScaleH;;
  int  App_width, App_height;
 
 
@@ -73,25 +73,39 @@ void init_ofxUniversalApp(){
         App_width = 1536;
         App_height = 2048;
         scaleWidth =4.8;
+        squaredScaleW=4.2666,squaredScaleH=4.2666;
         scaleHeight =4.2666;
+        fontScaleW=0.2,fontScaleH=0.24;
     }
     else if (!isRetina && !isiPad){
         App_width = 320;
         App_height = 480;
         scaleWidth =1;
         scaleHeight =1;
+        squaredScaleW =1;
+        squaredScaleH =1;
+        fontScaleW=1,fontScaleH=1;
+
     }
     else if (isRetina && !isiPad){
         App_width = 640;
         App_height = 960;
         scaleWidth =2;
         scaleHeight =2;
+        squaredScaleW =2;
+        squaredScaleH =2;
+        fontScaleW=0.5,fontScaleH=0.5;
+
     }
     else if (!isRetina && isiPad){
         App_width = 768;
         App_height = 1024;
         scaleWidth =2.4;
         scaleHeight =2.13333;
+        squaredScaleW =2.13333;
+        squaredScaleH =2.13333;
+        fontScaleW=0.43,fontScaleH=0.49;
+
     }
     
     if ([ [ UIScreen mainScreen ] bounds ].size.height == 568){
@@ -100,7 +114,10 @@ void init_ofxUniversalApp(){
         App_height = 1136;
         scaleWidth =2;
         scaleHeight =2.36666;
-        
+        squaredScaleW =2;
+        squaredScaleH =2;
+        fontScaleW=0.5,fontScaleH=0.45;
+
     }else{iphone5=false;
         
     }
