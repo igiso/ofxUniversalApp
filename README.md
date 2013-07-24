@@ -32,6 +32,7 @@ and then I upscale everything up automatically to fit the new resolution.
 This might sound horrible for images but we solve this by using 
 
 -> ofxUniversalImage
+and:
 -> ofxUniversalFont
 
 If your image appears pixelated you just provide an ADDITIONAL image in your data folder
