@@ -116,7 +116,7 @@ void init_ofxUniversalApp(){
         scaleHeight =2.36666;
         squaredScaleW =2;
         squaredScaleH =2;
-        fontScaleW=0.5,fontScaleH=0.45;
+        fontScaleW=0.5,fontScaleH=0.49;
 
     }else{iphone5=false;
         
@@ -129,6 +129,14 @@ ofPoint mouse(){
     
     float mousex = ofMap(ofGetMouseX(),0,320*scaleWidth,0,320);
     float mousey = ofMap(ofGetMouseY(), 0, 480*scaleHeight, 0,480);
+    ofPoint p;
+    p.set(mousex, mousey);
+    return p;
+}
+ofPoint mouseSquared(){
+    
+    float mousex = ofMap(ofGetMouseX(),0,320*squaredScaleW,0,320);
+    float mousey = ofMap(ofGetMouseY(), 0, 480*squaredScaleH, 0,480);
     ofPoint p;
     p.set(mousex, mousey);
     return p;

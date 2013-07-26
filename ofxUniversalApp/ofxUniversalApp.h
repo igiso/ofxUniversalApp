@@ -41,6 +41,7 @@ void init_ofxUniversalApp();
 
 
 ofPoint mouse();
+ofPoint mouse2();
 
 
 class ofxUniversalFont : public ofTrueTypeFont{
@@ -55,7 +56,7 @@ ofTrueTypeFont::loadFont(fontName, SIZE);
         ofTranslate(x, y);
 //float sx = ofMap(scaleWidth, 1, 4.8, 1,0.25);
 //float sy = ofMap(scaleHeight, 1, 4.2666, 1,0.2);
-        ofScale(fontScaleW,fontScaleH);
+        ofScale(fontScaleW,fontScaleW);
 ofTrueTypeFont::drawString(message,0,0);
         ofPopMatrix();
 
