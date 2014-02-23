@@ -6,6 +6,17 @@
 #include "ofxiPhoneExtras.h"
 
 #include "ofxUniversalApp.h"
+/* this example needs my specific data images in order to work
+
+ 
+ look for them in the OF forum!!
+ 
+ basically apple devices need images in a specified dimention to enable retina etc.
+ 
+ if you know what I mean go ahead and use your own images 
+ 
+ otherwise try find my data folder in my original OF post. 
+*/
 
 
 class testApp : public ofxiPhoneApp {
