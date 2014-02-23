@@ -11,6 +11,8 @@
  
  look for them in the OF forum!!
  
+ http://forum.openframeworks.cc/t/universal-app-example/10770/4
+ 
  basically apple devices need images in a specified dimention to enable retina etc.
  
  if you know what I mean go ahead and use your own images 
