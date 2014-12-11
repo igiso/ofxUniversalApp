@@ -18,6 +18,7 @@
  if you know what I mean go ahead and use your own images 
  
  otherwise try find my data folder in my original OF post. 
+ data folder also here: http://forum.openframeworks.cc/uploads/default/7149/dd35354b150c5f0d.zip
 */
 
 
