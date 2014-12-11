@@ -9,3 +9,6 @@ ofxUniversalImage
 ofxUniveraslFont
 
 among other things.
+
+DOWNLOAD DATA IMAGES: 
+http://www.2shared.com/fadmin/61342537/9f2e3569/data.zip.html
